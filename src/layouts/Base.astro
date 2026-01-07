@@ -44,12 +44,55 @@ const description = 'Criminal Justice Honor Society at Farmingdale State College
       .border-gradient {
         border: 1px solid rgba(212, 165, 53, 0.3);
       }
+      /* Leader name helpers */
+      .leader-name {
+        white-space: normal;
+        word-break: break-word;
+      }
+      .leadership-grid .card-hover {
+        align-self: start;
+      }
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-10px); }
       }
       .float {
         animation: float 6s ease-in-out infinite;
+      }
+
+      /* Hero entrance animations */
+      @keyframes hero-fade-up {
+        from { opacity: 0; transform: translateY(40px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes hero-fade-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+      @keyframes hero-scale-in {
+        from { opacity: 0; transform: scale(0.9); }
+        to   { opacity: 1; transform: scale(1); }
+      }
+      .hero-animate {
+        animation: hero-fade-up 0.8s cubic-bezier(0.4,0,0.2,1) both;
+      }
+      .hero-animate-delay-1 { animation-delay: 0.1s; }
+      .hero-animate-delay-2 { animation-delay: 0.2s; }
+      .hero-animate-delay-3 { animation-delay: 0.3s; }
+      .hero-animate-delay-4 { animation-delay: 0.4s; }
+      .hero-animate-delay-5 { animation-delay: 0.5s; }
+      .hero-card-animate {
+        animation: hero-scale-in 0.9s cubic-bezier(0.4,0,0.2,1) 0.3s both;
+      }
+      .nav-animate {
+        animation: hero-fade-in 0.6s cubic-bezier(0.4,0,0.2,1) both;
+      }
+
+      /* Reduce motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        .hero-animate, .hero-card-animate, .nav-animate, .float {
+          animation: none !important;
+        }
       }
     </style>
   </head>
@@ -63,5 +106,100 @@ const description = 'Criminal Justice Honor Society at Farmingdale State College
       </div>
       <slot />
     </div>
+
+    <script is:inline>
+      (function() {
+        // Apply initial hidden state
+        function hideElement(el, type) {
+          el.style.opacity = '0';
+          el.style.transition = 'none';
+          if (type === 'fade-in') {
+            el.style.transform = 'translateY(24px)';
+          } else if (type === 'fade-in-left') {
+            el.style.transform = 'translateX(-30px)';
+          } else if (type === 'fade-in-right') {
+            el.style.transform = 'translateX(30px)';
+          } else if (type === 'scale-in') {
+            el.style.transform = 'scale(0.92)';
+          }
+        }
+        
+        // Animate element in
+        function showElement(el, type, delay) {
+          setTimeout(function() {
+            el.style.transition = 'opacity 0.45s ease-out, transform 0.45s ease-out';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0) translateX(0) scale(1)';
+          }, delay);
+        }
+        
+        function initAnimations() {
+          // Get all animated elements
+          var fadeIn = document.querySelectorAll('.fade-in');
+          var fadeInLeft = document.querySelectorAll('.fade-in-left');
+          var fadeInRight = document.querySelectorAll('.fade-in-right');
+          var scaleIn = document.querySelectorAll('.scale-in');
+          var staggerChildren = document.querySelectorAll('.stagger-children');
+          
+          // Hide all elements initially
+          fadeIn.forEach(function(el) { hideElement(el, 'fade-in'); });
+          fadeInLeft.forEach(function(el) { hideElement(el, 'fade-in-left'); });
+          fadeInRight.forEach(function(el) { hideElement(el, 'fade-in-right'); });
+          scaleIn.forEach(function(el) { hideElement(el, 'scale-in'); });
+          staggerChildren.forEach(function(parent) {
+            var children = parent.children;
+            for (var i = 0; i < children.length; i++) {
+              hideElement(children[i], 'fade-in');
+            }
+          });
+          
+          // Force reflow
+          document.body.offsetHeight;
+          
+          // Create observer
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                var el = entry.target;
+                
+                if (el.classList.contains('stagger-children')) {
+                  var children = el.children;
+                  for (var i = 0; i < children.length; i++) {
+                    showElement(children[i], 'fade-in', i * 60);
+                  }
+                } else if (el.classList.contains('fade-in')) {
+                  showElement(el, 'fade-in', 0);
+                } else if (el.classList.contains('fade-in-left')) {
+                  showElement(el, 'fade-in-left', 0);
+                } else if (el.classList.contains('fade-in-right')) {
+                  showElement(el, 'fade-in-right', 0);
+                } else if (el.classList.contains('scale-in')) {
+                  showElement(el, 'scale-in', 0);
+                }
+                
+                observer.unobserve(el);
+              }
+            });
+          }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+          });
+          
+          // Observe all elements
+          fadeIn.forEach(function(el) { observer.observe(el); });
+          fadeInLeft.forEach(function(el) { observer.observe(el); });
+          fadeInRight.forEach(function(el) { observer.observe(el); });
+          scaleIn.forEach(function(el) { observer.observe(el); });
+          staggerChildren.forEach(function(el) { observer.observe(el); });
+        }
+        
+        // Wait for DOM
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initAnimations);
+        } else {
+          initAnimations();
+        }
+      })();
+    </script>
   </body>
 </html>

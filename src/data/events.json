@@ -1,0 +1,38 @@
+[
+  {
+    "featured": true,
+    "timeframe": "Jan 25, 2026",
+    "title": "Spring Induction Ceremony",
+    "description": "Welcome our newest members with the traditional blue & gold pinning ceremony, followed by a reception with faculty and alumni mentors.",
+    "location": "Campus Center Ballroom",
+    "icon": "star"
+  },
+  {
+    "timeframe": "Feb 8, 2026",
+    "title": "Mock Trial Workshop",
+    "description": "Sharpen your courtroom skills with hands-on mock trial exercises led by practicing attorneys from the Nassau County DA's office.",
+    "location": "Gleeson Hall, Room 202",
+    "icon": "scale"
+  },
+  {
+    "timeframe": "Feb 22, 2026",
+    "title": "Community Service Day",
+    "description": "Join us for our semester service project partnering with Long Island Cares to support local families in need.",
+    "location": "Long Island Cares Warehouse",
+    "icon": "heart"
+  },
+  {
+    "timeframe": "Mar 12, 2026",
+    "title": "Career Panel: Paths in Justice",
+    "description": "Hear from alumni working in law enforcement, legal aid, corrections, and private practice about their career journeys.",
+    "location": "Virtual via Zoom",
+    "icon": "briefcase"
+  },
+  {
+    "timeframe": "Apr 5, 2026",
+    "title": "Research Symposium",
+    "description": "Present your criminal justice research and receive feedback from faculty reviewers. Cash prizes for top presentations.",
+    "location": "Laffin Hall Auditorium",
+    "icon": "book"
+  }
+]
