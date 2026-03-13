@@ -9,7 +9,7 @@ import { siteConfig } from '../data/siteConfig';
       <span class="text-xs font-semibold uppercase tracking-widest">Membership</span>
       <div class="h-px w-6 bg-akc-gold/60"></div>
     </div>
-    <h2 class="font-serif text-3xl sm:text-4xl text-white mb-3">Your Path to Membership</h2>
+    <h2 class="font-serif text-3xl sm:text-4xl text-akc-light mb-3">Your Path to Membership</h2>
     <p class="text-sm text-akc-light/50">Four steps to join our community of future justice leaders</p>
   </div>
 
@@ -24,11 +24,11 @@ import { siteConfig } from '../data/siteConfig';
         { step: 3, title: 'Interview & Review',  desc: 'Meet with AKX officers and advisor to discuss your goals and service fit.' },
         { step: 4, title: 'Induction',           desc: 'Blue & gold pinning ceremony, mentorship pairing, and project kickoff.' },
       ].map(item => (
-        <div class="relative z-10 card-hover rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-center h-full">
+        <div class="relative z-10 card-hover rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 text-center h-full">
           <div class="w-10 h-10 mx-auto mb-3 rounded-lg bg-akc-gold flex items-center justify-center text-akc-dark font-bold text-sm">
             {item.step}
           </div>
-          <h3 class="text-sm font-semibold text-white mb-1.5">{item.title}</h3>
+          <h3 class="text-sm font-semibold text-akc-light mb-1.5">{item.title}</h3>
           <p class="text-xs text-akc-light/50">{item.desc}</p>
         </div>
       ))}
@@ -47,3 +47,5 @@ import { siteConfig } from '../data/siteConfig';
     </a>
   </div>
 </section>
+
+

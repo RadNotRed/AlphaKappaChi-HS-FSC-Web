@@ -9,13 +9,13 @@ import { executiveBoard } from '../data/leadership';
       <span class="text-xs font-semibold uppercase tracking-widest">Team</span>
       <div class="h-px w-6 bg-akc-gold/60"></div>
     </div>
-    <h2 class="font-serif text-3xl sm:text-4xl text-white mb-3">Executive Board</h2>
+    <h2 class="font-serif text-3xl sm:text-4xl text-akc-light mb-3">Executive Board</h2>
     <p class="text-sm text-akc-light/50">Meet the leaders driving our mission forward</p>
   </div>
 
   <div class="stagger-children grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
     {executiveBoard.map(member => (
-      <div class="group card-hover rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-center">
+      <div class="group card-hover rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 text-center">
         <!-- Avatar -->
         <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-akc-navy to-akc-slate border border-akc-gold/20 flex items-center justify-center group-hover:border-akc-gold/40 transition-colors overflow-hidden">
           {member.image ? (
@@ -27,7 +27,7 @@ import { executiveBoard } from '../data/leadership';
           )}
         </div>
         <p class="text-[11px] font-semibold text-akc-gold uppercase tracking-wider mb-1">{member.role}</p>
-        <p class="text-sm font-semibold text-white mb-1">{member.name}</p>
+        <p class="text-sm font-semibold text-akc-light mb-1">{member.name}</p>
         {member.bio && (
           <p class="text-xs text-akc-light/40 leading-relaxed">{member.bio}</p>
         )}
@@ -35,3 +35,5 @@ import { executiveBoard } from '../data/leadership';
     ))}
   </div>
 </section>
+
+

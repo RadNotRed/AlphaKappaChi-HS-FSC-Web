@@ -9,7 +9,7 @@
         <div class="h-px w-10 bg-akc-gold/60"></div>
         <span class="text-xs font-semibold uppercase tracking-widest">Our Mission</span>
       </div>
-      <h2 class="font-serif text-3xl sm:text-4xl md:text-[2.75rem] text-white leading-tight">
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-[2.75rem] text-akc-light leading-tight">
         Scholarship. Integrity.<br/>
         <span class="text-gradient">Service to Community.</span>
       </h2>
@@ -34,16 +34,18 @@
         { title: 'Community Impact', desc: 'Service projects across Long Island focused on youth outreach and restorative practices.', icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
         { title: 'Field Experience', desc: 'Courtroom visits, simulation labs, and hands-on training with local agencies.', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
       ].map(item => (
-        <div class="card-hover rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 space-y-2.5">
+        <div class="card-hover rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 space-y-2.5">
           <div class="w-10 h-10 rounded-lg bg-akc-gold/10 flex items-center justify-center">
             <svg class="w-5 h-5 text-akc-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}></path>
             </svg>
           </div>
-          <h3 class="text-[15px] font-semibold text-white">{item.title}</h3>
+          <h3 class="text-[15px] font-semibold text-akc-light">{item.title}</h3>
           <p class="text-xs text-akc-light/50 leading-relaxed">{item.desc}</p>
         </div>
       ))}
     </div>
   </div>
 </section>
+
+

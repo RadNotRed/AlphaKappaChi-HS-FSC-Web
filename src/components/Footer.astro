@@ -2,17 +2,17 @@
 import { siteConfig, navLinks, socialLinks } from '../data/siteConfig';
 ---
 
-<footer class="fade-in border-t border-white/[0.04] mt-12">
+<footer class="fade-in border-t border-white/[0.08] mt-14">
   <div class="max-w-6xl mx-auto px-5 py-12">
-    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
       <!-- Brand -->
       <div class="sm:col-span-2 space-y-4">
         <div class="flex items-center gap-3">
-          <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-akc-gold text-akc-dark font-bold text-xs">
+          <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-akc-navy to-akc-gold text-akc-dark font-bold text-xs">
             {siteConfig.abbreviation}
           </div>
           <div>
-            <p class="text-sm font-semibold text-white">{siteConfig.name}</p>
+            <p class="text-sm font-semibold text-akc-light">{siteConfig.name}</p>
             <p class="text-[11px] text-akc-light/50">{siteConfig.subtitle}</p>
           </div>
         </div>
@@ -22,7 +22,7 @@ import { siteConfig, navLinks, socialLinks } from '../data/siteConfig';
         </p>
         <div class="flex gap-2">
           {socialLinks.map(link => (
-            <a href={link.href} aria-label={link.label} class="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-center text-akc-light/40 hover:text-akc-gold hover:border-akc-gold/20 transition-colors">
+            <a href={link.href} aria-label={link.label} class="w-8 h-8 rounded-lg bg-white/5 border border-white/[0.08] flex items-center justify-center text-akc-light/40 hover:text-akc-gold hover:border-akc-gold/40 transition-colors">
               {link.icon === 'email' && (
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -45,7 +45,7 @@ import { siteConfig, navLinks, socialLinks } from '../data/siteConfig';
 
       <!-- Quick links -->
       <div>
-        <p class="text-xs font-semibold text-white mb-3">Quick Links</p>
+        <p class="text-xs font-semibold text-akc-light mb-3">Quick Links</p>
         <ul class="space-y-2 text-xs">
           {navLinks.map(link => (
             <li><a href={link.href} class="text-akc-light/40 hover:text-akc-gold transition-colors">{link.label}</a></li>
@@ -55,7 +55,7 @@ import { siteConfig, navLinks, socialLinks } from '../data/siteConfig';
 
       <!-- Support -->
       <div>
-        <p class="text-xs font-semibold text-white mb-3">Support {siteConfig.abbreviation}</p>
+        <p class="text-xs font-semibold text-akc-light mb-3">Support {siteConfig.abbreviation}</p>
         <ul class="space-y-2 text-xs">
           <li><a href={siteConfig.donationLink} class="text-akc-light/40 hover:text-akc-gold transition-colors">Donate</a></li>
           <li><a href={`mailto:${siteConfig.email}`} class="text-akc-light/40 hover:text-akc-gold transition-colors">Sponsor a Program</a></li>
@@ -64,7 +64,7 @@ import { siteConfig, navLinks, socialLinks } from '../data/siteConfig';
       </div>
     </div>
 
-    <div class="border-t border-white/[0.04] mt-8 pt-6 flex flex-wrap items-center justify-between gap-3 text-[11px] text-akc-light/30">
+    <div class="border-t border-white/[0.08] mt-8 pt-6 flex flex-wrap items-center justify-between gap-3 text-[11px] text-akc-light/40">
       <p>© {siteConfig.copyrightYear} {siteConfig.name} · {siteConfig.college}</p>
       <p class="flex items-center gap-1.5">
         <span class="w-1.5 h-1.5 rounded-full bg-akc-gold/60"></span>
@@ -73,3 +73,5 @@ import { siteConfig, navLinks, socialLinks } from '../data/siteConfig';
     </div>
   </div>
 </footer>
+
+

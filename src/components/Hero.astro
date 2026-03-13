@@ -2,21 +2,21 @@
 import { siteConfig, heroStats } from '../data/siteConfig';
 ---
 
-<section class="relative min-h-[85vh] flex items-center pt-4 pb-16">
+<section class="relative min-h-[80vh] flex items-center pt-8 pb-16">
   <div class="max-w-6xl mx-auto px-5 w-full">
     <div class="grid items-center gap-10 lg:grid-cols-2">
       <!-- Text column -->
       <div class="space-y-6">
-        <div class="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 hero-animate hero-animate-delay-1">
+        <div class="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.02] px-4 py-2 hero-animate hero-animate-delay-1 shadow-sm">
           <div class="h-1.5 w-1.5 rounded-full bg-akc-gold animate-pulse"></div>
-          <span class="text-xs font-medium text-akc-light/70">{siteConfig.college} · {siteConfig.state}</span>
+          <span class="text-xs font-medium text-akc-light/80">{siteConfig.college} · {siteConfig.state}</span>
         </div>
 
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-white hero-animate hero-animate-delay-2">
-          Advancing <span class="text-gradient">Justice</span><br class="hidden sm:block" /> Through Excellence
+        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[0.98] section-heading hero-animate hero-animate-delay-2">
+          Build a Bold Career in<br class="hidden sm:block" /> <span class="text-gradient">Justice Leadership</span>
         </h1>
 
-        <p class="text-base sm:text-lg text-akc-light/60 max-w-lg leading-relaxed hero-animate hero-animate-delay-3">
+        <p class="text-base sm:text-lg section-copy max-w-xl leading-relaxed hero-animate hero-animate-delay-3">
           The Alpha Kappa Chi chapter of Alpha Phi Sigma — the national criminal justice honor
           society — unites Farmingdale State College's highest-achieving students dedicated to
           scholarship, integrity, and service to community.
@@ -34,18 +34,18 @@ import { siteConfig, heroStats } from '../data/siteConfig';
           </a>
           <a
             href="#about"
-            class="inline-flex items-center gap-2 rounded-lg border border-white/10 px-6 py-3 text-sm font-medium text-white/80 hover:bg-white/5 hover:text-white transition-all duration-200"
+            class="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-medium text-akc-light hover:bg-white/5 transition-all duration-200"
           >
             Learn More
           </a>
         </div>
 
         <!-- Stats -->
-        <div class="flex gap-8 pt-6 border-t border-white/[0.06] hero-animate hero-animate-delay-5">
+        <div class="flex gap-8 pt-6 border-t border-white/[0.08] hero-animate hero-animate-delay-5">
           {heroStats.map(stat => (
             <div>
-              <p class={`text-2xl sm:text-3xl font-bold ${stat.highlight ? 'text-gradient' : 'text-white'}`}>{stat.value}</p>
-              <p class="text-[11px] uppercase tracking-wider text-akc-light/40 mt-0.5">{stat.label}</p>
+              <p class={`text-2xl sm:text-3xl font-bold ${stat.highlight ? 'text-gradient' : 'text-akc-light'}`}>{stat.value}</p>
+              <p class="text-[11px] uppercase tracking-wider text-akc-light/60 mt-0.5">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -53,16 +53,16 @@ import { siteConfig, heroStats } from '../data/siteConfig';
 
       <!-- Hero card -->
       <div class="relative float hero-card-animate hidden lg:block">
-        <div class="absolute -inset-6 bg-akc-gold/[0.06] rounded-3xl blur-2xl"></div>
-        <div class="relative rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-7">
+        <div class="absolute -inset-6 bg-akc-gold/20 rounded-3xl blur-2xl"></div>
+        <div class="relative rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-7 shadow-xl shadow-black/10">
           <!-- Badge -->
           <div class="flex justify-center mb-6">
             <div class="relative">
               <div class="absolute inset-0 bg-akc-gold/20 rounded-full blur-lg"></div>
-              <div class="relative w-24 h-24 rounded-full bg-gradient-to-br from-akc-navy via-akc-slate to-akc-navy border-2 border-akc-gold/40 flex items-center justify-center">
+              <div class="relative w-24 h-24 rounded-full bg-gradient-to-br from-akc-navy via-akc-navy to-akc-gold border-2 border-akc-gold/50 flex items-center justify-center">
                 <div class="text-center">
                   <p class="text-lg font-bold text-gradient">{siteConfig.abbreviation}</p>
-                  <p class="text-[9px] uppercase tracking-widest text-akc-light/50">Est. {siteConfig.foundedYear}</p>
+                  <p class="text-[9px] uppercase tracking-widest text-akc-light/70">Est. {siteConfig.foundedYear}</p>
                 </div>
               </div>
             </div>
@@ -75,16 +75,16 @@ import { siteConfig, heroStats } from '../data/siteConfig';
               { title: 'Community Service', desc: 'Outreach programs and partnerships with local organizations across Long Island.', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
               { title: 'Career Development', desc: 'Agency visits, resume workshops, and networking with justice professionals.', icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
             ].map(item => (
-              <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <div class="rounded-xl border border-white/[0.08] bg-white/[0.02] p-4">
                 <div class="flex items-center gap-2.5 mb-1.5">
                   <div class="w-7 h-7 rounded-md bg-akc-gold/10 flex items-center justify-center">
                     <svg class="w-3.5 h-3.5 text-akc-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}></path>
                     </svg>
                   </div>
-                  <p class="text-sm font-medium text-white">{item.title}</p>
+                  <p class="text-sm font-semibold text-akc-light">{item.title}</p>
                 </div>
-                <p class="text-xs text-akc-light/50 leading-relaxed pl-[38px]">{item.desc}</p>
+                <p class="text-xs text-akc-light/70 leading-relaxed pl-[38px]">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -93,3 +93,5 @@ import { siteConfig, heroStats } from '../data/siteConfig';
     </div>
   </div>
 </section>
+
+

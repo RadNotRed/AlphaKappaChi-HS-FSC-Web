@@ -9,7 +9,7 @@ import { pastPresidents } from '../data/presidents';
       <span class="text-xs font-semibold uppercase tracking-widest">History</span>
       <div class="h-px w-6 bg-akc-gold/60"></div>
     </div>
-    <h2 class="font-serif text-3xl sm:text-4xl text-white mb-3">Chapter Presidents</h2>
+    <h2 class="font-serif text-3xl sm:text-4xl text-akc-light mb-3">Chapter Presidents</h2>
     <p class="text-sm text-akc-light/50">The leaders who have guided the Alpha Kappa Chi chapter</p>
   </div>
 
@@ -35,10 +35,10 @@ import { pastPresidents } from '../data/presidents';
             </div>
 
             <!-- Content -->
-            <div class="flex-1 card-hover rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex-1 card-hover rounded-xl border border-white/[0.08] bg-white/[0.02] p-4">
               <div class="flex flex-wrap items-center justify-between gap-2">
                 <div>
-                  <p class="text-sm font-semibold text-white">{president.name}</p>
+                  <p class="text-sm font-semibold text-akc-light">{president.name}</p>
                   <p class="text-xs text-akc-gold/80">{president.term}</p>
                 </div>
                 {idx === 0 && (
@@ -52,3 +52,5 @@ import { pastPresidents } from '../data/presidents';
     </div>
   </div>
 </section>
+
+
