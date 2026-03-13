@@ -1,0 +1,49 @@
+---
+// About / Mission section
+---
+
+<section id="about" class="scroll-mt-20">
+  <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+    <div class="space-y-5 fade-in-left">
+      <div class="inline-flex items-center gap-2 text-akc-gold">
+        <div class="h-px w-10 bg-akc-gold/60"></div>
+        <span class="text-xs font-semibold uppercase tracking-widest">Our Mission</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-[2.75rem] text-white leading-tight">
+        Scholarship. Integrity.<br/>
+        <span class="text-gradient">Service to Community.</span>
+      </h2>
+      <p class="text-base text-akc-light/60 leading-relaxed">
+        Alpha Kappa Chi brings together dedicated criminal justice students who strive for academic
+        excellence and meaningful community impact. Through peer mentorship, hands-on training, and
+        civic engagement, our members develop the skills and character needed to lead in the justice
+        field.
+      </p>
+      <a href="#join" class="inline-flex items-center gap-2 text-sm text-akc-gold font-medium hover:gap-3 transition-all">
+        Become a member
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid gap-3 sm:grid-cols-2 stagger-children">
+      {[
+        { title: 'Academic Excellence', desc: 'Peer-led research circles, writing labs, and moot-court prep with faculty mentors.', icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z' },
+        { title: 'Professional Growth', desc: 'Agency visits, resume workshops, and panels with alumni in law enforcement.', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' },
+        { title: 'Community Impact', desc: 'Service projects across Long Island focused on youth outreach and restorative practices.', icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
+        { title: 'Field Experience', desc: 'Courtroom visits, simulation labs, and hands-on training with local agencies.', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+      ].map(item => (
+        <div class="card-hover rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 space-y-2.5">
+          <div class="w-10 h-10 rounded-lg bg-akc-gold/10 flex items-center justify-center">
+            <svg class="w-5 h-5 text-akc-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}></path>
+            </svg>
+          </div>
+          <h3 class="text-[15px] font-semibold text-white">{item.title}</h3>
+          <p class="text-xs text-akc-light/50 leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

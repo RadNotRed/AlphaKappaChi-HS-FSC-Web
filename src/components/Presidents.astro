@@ -1,0 +1,54 @@
+---
+import { pastPresidents } from '../data/presidents';
+---
+
+<section id="presidents" class="scroll-mt-20">
+  <div class="fade-in text-center max-w-2xl mx-auto mb-10">
+    <div class="inline-flex items-center gap-2 text-akc-gold mb-3">
+      <div class="h-px w-6 bg-akc-gold/60"></div>
+      <span class="text-xs font-semibold uppercase tracking-widest">History</span>
+      <div class="h-px w-6 bg-akc-gold/60"></div>
+    </div>
+    <h2 class="font-serif text-3xl sm:text-4xl text-white mb-3">Chapter Presidents</h2>
+    <p class="text-sm text-akc-light/50">The leaders who have guided the Alpha Kappa Chi chapter</p>
+  </div>
+
+  <div class="max-w-xl mx-auto">
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-akc-gold/30 via-akc-gold/10 to-transparent"></div>
+
+      <div class="stagger-children space-y-4">
+        {pastPresidents.map((president, idx) => (
+          <div class="relative flex items-center gap-4 group">
+            <!-- Timeline dot -->
+            <div class="relative z-10 flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-akc-navy to-akc-slate border border-akc-gold/20 flex items-center justify-center group-hover:border-akc-gold/40 transition-colors overflow-hidden">
+                {president.image ? (
+                  <img src={president.image} alt={president.name} class="w-full h-full object-cover" />
+                ) : (
+                  <svg class="w-5 h-5 text-akc-light/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                  </svg>
+                )}
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 card-hover rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div>
+                  <p class="text-sm font-semibold text-white">{president.name}</p>
+                  <p class="text-xs text-akc-gold/80">{president.term}</p>
+                </div>
+                {idx === 0 && (
+                  <span class="text-[10px] font-semibold text-akc-gold bg-akc-gold/10 px-2 py-0.5 rounded-full">Current</span>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

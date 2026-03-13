@@ -1,0 +1,49 @@
+---
+import { siteConfig } from '../data/siteConfig';
+---
+
+<section id="join" class="scroll-mt-20">
+  <div class="fade-in text-center max-w-2xl mx-auto mb-12">
+    <div class="inline-flex items-center gap-2 text-akc-gold mb-3">
+      <div class="h-px w-6 bg-akc-gold/60"></div>
+      <span class="text-xs font-semibold uppercase tracking-widest">Membership</span>
+      <div class="h-px w-6 bg-akc-gold/60"></div>
+    </div>
+    <h2 class="font-serif text-3xl sm:text-4xl text-white mb-3">Your Path to Membership</h2>
+    <p class="text-sm text-akc-light/50">Four steps to join our community of future justice leaders</p>
+  </div>
+
+  <div class="relative">
+    <div class="pointer-events-none absolute left-2 right-2 top-10 hidden lg:block">
+      <div class="h-px bg-gradient-to-r from-akc-gold/0 via-akc-gold/20 to-akc-gold/0"></div>
+    </div>
+    <div class="stagger-children grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {[
+        { step: 1, title: 'Confirm Eligibility', desc: '3.25+ GPA in criminal justice coursework and good standing with FSC.' },
+        { step: 2, title: 'Submit Application', desc: 'Resume, faculty recommendation, and a statement on justice leadership.' },
+        { step: 3, title: 'Interview & Review',  desc: 'Meet with AKX officers and advisor to discuss your goals and service fit.' },
+        { step: 4, title: 'Induction',           desc: 'Blue & gold pinning ceremony, mentorship pairing, and project kickoff.' },
+      ].map(item => (
+        <div class="relative z-10 card-hover rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-center h-full">
+          <div class="w-10 h-10 mx-auto mb-3 rounded-lg bg-akc-gold flex items-center justify-center text-akc-dark font-bold text-sm">
+            {item.step}
+          </div>
+          <h3 class="text-sm font-semibold text-white mb-1.5">{item.title}</h3>
+          <p class="text-xs text-akc-light/50">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="fade-in text-center mt-8">
+    <a
+      href={`mailto:${siteConfig.email}`}
+      class="inline-flex items-center gap-2 text-sm text-akc-gold font-medium hover:gap-3 transition-all"
+    >
+      Questions? Contact the executive board
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  </div>
+</section>

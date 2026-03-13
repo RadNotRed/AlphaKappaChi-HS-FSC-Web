@@ -1,0 +1,57 @@
+---
+// Farmingdale Connection section
+---
+
+<section class="relative overflow-hidden scale-in">
+  <div class="absolute inset-0 bg-gradient-to-r from-akc-navy/30 to-akc-slate/30 rounded-2xl"></div>
+  <div class="relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8 md:p-10">
+    <div class="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+      <div class="space-y-5 fade-in-left">
+        <div class="inline-flex items-center gap-2 text-akc-gold">
+          <div class="h-px w-10 bg-akc-gold/60"></div>
+          <span class="text-xs font-semibold uppercase tracking-widest">Our Home</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl text-white leading-tight">
+          Rooted in <span class="text-gradient">Farmingdale</span>
+        </h2>
+        <p class="text-base text-akc-light/60 leading-relaxed">
+          Based at Farmingdale State College, Alpha Kappa Chi draws on the campus's strong criminal
+          justice program and deep ties to Long Island's law-enforcement community. Our members gain
+          real-world exposure through joint training, courtroom observations, and partnerships with
+          local agencies.
+        </p>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <p class="text-sm font-semibold text-white mb-1">Field Ready</p>
+            <p class="text-xs text-akc-light/50">Mock incident command, crisis communication, and evidence handling.</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <p class="text-sm font-semibold text-white mb-1">Civic Engagement</p>
+            <p class="text-xs text-akc-light/50">Youth mentorship and restorative justice workshops.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
+        <p class="text-sm font-semibold text-akc-gold mb-3">Program Highlights</p>
+        <ul class="space-y-3">
+          {[
+            'Joint training sessions with local agencies',
+            'Career treks to NYC courts and law firms',
+            'Alumni mentorship network',
+            'Scholarships for research & conferences',
+          ].map(item => (
+            <li class="flex items-start gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-akc-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-2.5 h-2.5 text-akc-gold" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-sm text-akc-light/60">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

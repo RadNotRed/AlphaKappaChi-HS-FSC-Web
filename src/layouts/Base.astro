@@ -1,7 +1,7 @@
 ---
-const title = "Alpha Kappa Chi | Farmingdale State College";
+const title = "Alpha Kappa Chi | Alpha Phi Sigma · Farmingdale State College";
 const description =
-  "Criminal Justice Honor Society at Farmingdale State College, NY";
+  "Alpha Kappa Chi — the Farmingdale State College chapter of Alpha Phi Sigma, the National Criminal Justice Honor Society.";
 ---
 
 <!doctype html>
@@ -21,20 +21,24 @@ const description =
       html {
         scroll-behavior: smooth;
       }
+      /* Solid nav background */
+      .nav-bg {
+        background: #0a1628;
+      }
       .glass {
-        background: rgba(26, 41, 66, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(26, 41, 66, 0.4);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
       }
       .gold-glow {
-        box-shadow: 0 0 40px rgba(212, 165, 53, 0.15);
+        box-shadow: 0 0 20px rgba(212, 165, 53, 0.08);
       }
       .card-hover {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .card-hover:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       }
       .text-gradient {
         color: #d4a535;
@@ -49,15 +53,11 @@ const description =
         -webkit-text-fill-color: transparent;
       }
       .border-gradient {
-        border: 1px solid rgba(212, 165, 53, 0.3);
+        border: 1px solid rgba(212, 165, 53, 0.2);
       }
-      /* Leader name helpers */
       .leader-name {
         white-space: normal;
         word-break: break-word;
-      }
-      .leadership-grid .card-hover {
-        align-self: start;
       }
       @keyframes float {
         0%,
@@ -65,7 +65,7 @@ const description =
           transform: translateY(0px);
         }
         50% {
-          transform: translateY(-10px);
+          transform: translateY(-8px);
         }
       }
       .float {
@@ -76,7 +76,7 @@ const description =
       @keyframes hero-fade-up {
         from {
           opacity: 0;
-          transform: translateY(40px);
+          transform: translateY(24px);
         }
         to {
           opacity: 1;
@@ -84,17 +84,13 @@ const description =
         }
       }
       @keyframes hero-fade-in {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
       @keyframes hero-scale-in {
         from {
           opacity: 0;
-          transform: scale(0.9);
+          transform: scale(0.95);
         }
         to {
           opacity: 1;
@@ -102,31 +98,20 @@ const description =
         }
       }
       .hero-animate {
-        animation: hero-fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+        animation: hero-fade-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
       }
-      .hero-animate-delay-1 {
-        animation-delay: 0.1s;
-      }
-      .hero-animate-delay-2 {
-        animation-delay: 0.2s;
-      }
-      .hero-animate-delay-3 {
-        animation-delay: 0.3s;
-      }
-      .hero-animate-delay-4 {
-        animation-delay: 0.4s;
-      }
-      .hero-animate-delay-5 {
-        animation-delay: 0.5s;
-      }
+      .hero-animate-delay-1 { animation-delay: 0.1s; }
+      .hero-animate-delay-2 { animation-delay: 0.15s; }
+      .hero-animate-delay-3 { animation-delay: 0.2s; }
+      .hero-animate-delay-4 { animation-delay: 0.3s; }
+      .hero-animate-delay-5 { animation-delay: 0.4s; }
       .hero-card-animate {
-        animation: hero-scale-in 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+        animation: hero-scale-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.25s both;
       }
       .nav-animate {
-        animation: hero-fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+        animation: hero-fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
       }
 
-      /* Reduce motion preference */
       @media (prefers-reduced-motion: reduce) {
         .hero-animate,
         .hero-card-animate,
@@ -164,7 +149,7 @@ const description =
 
     <script is:inline>
       (function () {
-        // Apply initial hidden state
+        /* ── Scroll-based entrance animations ── */
         function hideElement(el, type) {
           el.style.opacity = "0";
           el.style.transition = "none";
@@ -179,7 +164,6 @@ const description =
           }
         }
 
-        // Animate element in
         function showElement(el, type, delay) {
           setTimeout(function () {
             el.style.transition =
@@ -190,26 +174,16 @@ const description =
         }
 
         function initAnimations() {
-          // Get all animated elements
           var fadeIn = document.querySelectorAll(".fade-in");
           var fadeInLeft = document.querySelectorAll(".fade-in-left");
           var fadeInRight = document.querySelectorAll(".fade-in-right");
           var scaleIn = document.querySelectorAll(".scale-in");
           var staggerChildren = document.querySelectorAll(".stagger-children");
 
-          // Hide all elements initially
-          fadeIn.forEach(function (el) {
-            hideElement(el, "fade-in");
-          });
-          fadeInLeft.forEach(function (el) {
-            hideElement(el, "fade-in-left");
-          });
-          fadeInRight.forEach(function (el) {
-            hideElement(el, "fade-in-right");
-          });
-          scaleIn.forEach(function (el) {
-            hideElement(el, "scale-in");
-          });
+          fadeIn.forEach(function (el) { hideElement(el, "fade-in"); });
+          fadeInLeft.forEach(function (el) { hideElement(el, "fade-in-left"); });
+          fadeInRight.forEach(function (el) { hideElement(el, "fade-in-right"); });
+          scaleIn.forEach(function (el) { hideElement(el, "scale-in"); });
           staggerChildren.forEach(function (parent) {
             var children = parent.children;
             for (var i = 0; i < children.length; i++) {
@@ -217,15 +191,11 @@ const description =
             }
           });
 
-          // Initialize Intersection Observer
-
-          // Create observer
           var observer = new IntersectionObserver(
             function (entries) {
               entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                   var el = entry.target;
-
                   if (el.classList.contains("stagger-children")) {
                     var children = el.children;
                     for (var i = 0; i < children.length; i++) {
@@ -240,40 +210,79 @@ const description =
                   } else if (el.classList.contains("scale-in")) {
                     showElement(el, "scale-in", 0);
                   }
-
                   observer.unobserve(el);
                 }
               });
             },
-            {
-              threshold: 0.1,
-              rootMargin: "0px 0px -80px 0px",
-            },
+            { threshold: 0.1, rootMargin: "0px 0px -80px 0px" },
           );
 
-          // Observe all elements
-          fadeIn.forEach(function (el) {
-            observer.observe(el);
+          fadeIn.forEach(function (el) { observer.observe(el); });
+          fadeInLeft.forEach(function (el) { observer.observe(el); });
+          fadeInRight.forEach(function (el) { observer.observe(el); });
+          scaleIn.forEach(function (el) { observer.observe(el); });
+          staggerChildren.forEach(function (el) { observer.observe(el); });
+        }
+
+        /* ── Mobile hamburger menu ── */
+        function initMobileMenu() {
+          var btn = document.getElementById("mobile-menu-btn");
+          var menu = document.getElementById("mobile-menu");
+          if (!btn || !menu) return;
+
+          var isOpen = false;
+          btn.addEventListener("click", function () {
+            isOpen = !isOpen;
+            btn.setAttribute("aria-expanded", String(isOpen));
+            if (isOpen) {
+              menu.style.maxHeight = menu.scrollHeight + "px";
+              menu.style.opacity = "1";
+            } else {
+              menu.style.maxHeight = "0";
+              menu.style.opacity = "0";
+            }
+            // Animate hamburger lines
+            var lines = btn.querySelectorAll(".hamburger-line");
+            if (lines.length === 3) {
+              if (isOpen) {
+                lines[0].style.transform = "translateY(8px) rotate(45deg)";
+                lines[1].style.opacity = "0";
+                lines[2].style.transform = "translateY(-8px) rotate(-45deg)";
+              } else {
+                lines[0].style.transform = "";
+                lines[1].style.opacity = "1";
+                lines[2].style.transform = "";
+              }
+            }
           });
-          fadeInLeft.forEach(function (el) {
-            observer.observe(el);
-          });
-          fadeInRight.forEach(function (el) {
-            observer.observe(el);
-          });
-          scaleIn.forEach(function (el) {
-            observer.observe(el);
-          });
-          staggerChildren.forEach(function (el) {
-            observer.observe(el);
+
+          // Close menu when clicking a nav link
+          var links = menu.querySelectorAll(".mobile-nav-link");
+          links.forEach(function (link) {
+            link.addEventListener("click", function () {
+              isOpen = false;
+              btn.setAttribute("aria-expanded", "false");
+              menu.style.maxHeight = "0";
+              menu.style.opacity = "0";
+              var lines = btn.querySelectorAll(".hamburger-line");
+              if (lines.length === 3) {
+                lines[0].style.transform = "";
+                lines[1].style.opacity = "1";
+                lines[2].style.transform = "";
+              }
+            });
           });
         }
 
-        // Wait for DOM
+        /* ── Boot ── */
         if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", initAnimations);
+          document.addEventListener("DOMContentLoaded", function () {
+            initAnimations();
+            initMobileMenu();
+          });
         } else {
           initAnimations();
+          initMobileMenu();
         }
       })();
     </script>

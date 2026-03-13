@@ -1,0 +1,64 @@
+---
+import { siteConfig } from '../data/siteConfig';
+---
+
+<section id="donate" class="scale-in relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-akc-gold/[0.08] via-akc-gold/[0.04] to-transparent rounded-2xl"></div>
+  <div class="relative rounded-2xl border border-akc-gold/10 bg-white/[0.02] p-8 md:p-12">
+    <div class="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+      <div class="fade-in-left space-y-5">
+        <div class="inline-flex items-center gap-2 text-akc-gold">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+          <span class="text-xs font-semibold uppercase tracking-widest">Support Our Mission</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl text-white leading-tight">
+          Invest in the Future of <span class="text-gradient">Justice</span>
+        </h2>
+        <p class="text-base text-akc-light/60 leading-relaxed">
+          Your generosity fuels scholarships, service projects, and professional development
+          opportunities that prepare our members to lead in the criminal justice field.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href={siteConfig.donationLink}
+            class="group inline-flex items-center gap-2 rounded-lg bg-akc-gold px-6 py-3 text-sm font-semibold text-akc-dark hover:bg-akc-gold-light transition-all duration-200 shadow-md shadow-akc-gold/20"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+            Donate Now
+          </a>
+          <a
+            href={`mailto:${siteConfig.email}`}
+            class="inline-flex items-center gap-2 rounded-lg border border-akc-gold/30 px-6 py-3 text-sm font-medium text-akc-gold hover:bg-akc-gold/5 transition-all duration-200"
+          >
+            Sponsor a Program
+          </a>
+        </div>
+      </div>
+
+      <div class="fade-in-right rounded-xl border border-white/[0.06] bg-white/[0.02] p-6">
+        <p class="text-sm font-semibold text-white mb-4">What Your Gift Powers</p>
+        <ul class="space-y-3">
+          {[
+            'Student travel to conferences and competitions',
+            'Service-learning materials for youth outreach',
+            'Research micro-grants and publishing fees',
+            'Leadership summits with partner agencies',
+          ].map(item => (
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-md bg-akc-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-akc-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="text-sm text-akc-light/60">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
