@@ -4,46 +4,82 @@
 
 <section id="about" class="scroll-mt-20">
   <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
-    <div class="space-y-5 fade-in-left">
+    <!-- Left Column: National Info -->
+    <div class="space-y-6 fade-in-left">
       <div class="inline-flex items-center gap-2 text-akc-gold">
         <div class="h-px w-10 bg-akc-gold/60"></div>
-        <span class="text-xs font-semibold uppercase tracking-widest">Our Mission</span>
+        <span class="text-xs font-semibold uppercase tracking-widest">Alpha Phi Sigma</span>
       </div>
-      <h2 class="font-serif text-3xl sm:text-4xl md:text-[2.75rem] text-akc-light leading-tight">
-        Scholarship. Integrity.<br/>
-        <span class="text-gradient">Service to Community.</span>
+      
+      <h2 class="font-serif text-3xl sm:text-4xl text-akc-light leading-tight">
+        The Criminal Justice<br/>
+        <span class="text-gradient">Honor Society</span>
       </h2>
-      <p class="text-base text-akc-light/60 leading-relaxed">
-        Alpha Kappa Chi brings together dedicated criminal justice students who strive for academic
-        excellence and meaningful community impact. Through peer mentorship, hands-on training, and
-        civic engagement, our members develop the skills and character needed to lead in the justice
-        field.
-      </p>
-      <a href="#join" class="inline-flex items-center gap-2 text-sm text-akc-gold font-medium hover:gap-3 transition-all">
-        Become a member
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-      </a>
+      
+      <div class="space-y-3 text-sm text-akc-light/70 leading-relaxed border-l-2 border-akc-gold/30 pl-4 mt-6">
+        <p>Certified Member of the Association of College Honor Societies</p>
+        <p>Affiliated with the Academy of Criminal Justice Sciences</p>
+        <a href="http://www.AlphaPhiSigma.org" target="_blank" rel="noopener noreferrer" class="inline-block mt-1 pt-2 text-akc-gold hover:text-akc-gold-light transition-colors font-medium">www.AlphaPhiSigma.org</a>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-white/[0.08]">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-akc-gold mb-3">Recognizing & Promoting</h3>
+        <p class="text-lg font-medium text-akc-light tracking-wide">
+          Academic Excellence • Leadership • Service • Unity
+        </p>
+      </div>
     </div>
 
-    <div class="grid gap-3 sm:grid-cols-2 stagger-children">
-      {[
-        { title: 'Academic Excellence', desc: 'Peer-led research circles, writing labs, and moot-court prep with faculty mentors.', icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z' },
-        { title: 'Professional Growth', desc: 'Agency visits, resume workshops, and panels with alumni in law enforcement.', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' },
-        { title: 'Community Impact', desc: 'Service projects across Long Island focused on youth outreach and restorative practices.', icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
-        { title: 'Field Experience', desc: 'Courtroom visits, simulation labs, and hands-on training with local agencies.', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
-      ].map(item => (
-        <div class="card-hover rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 space-y-2.5">
-          <div class="w-10 h-10 rounded-lg bg-akc-gold/10 flex items-center justify-center">
-            <svg class="w-5 h-5 text-akc-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}></path>
+    <!-- Right Column: Join Info -->
+    <div class="relative card-hover rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 sm:p-8 fade-in-right h-full">
+      <div class="absolute inset-0 bg-akc-gold/5 rounded-2xl pointer-events-none"></div>
+      <div class="relative z-10">
+        <h3 class="text-lg sm:text-xl font-serif text-akc-light mb-6 leading-snug">
+          JOIN THE ONLY <span class="text-gradient">ACCREDITED</span><br/>
+          CRIMINAL JUSTICE HONOR SOCIETY
+        </h3>
+        
+        <ul class="space-y-3.5 text-sm text-akc-light/75">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-akc-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Join the thousands of members and alumni across the world.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-akc-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Membership is based on academic excellence.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-akc-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Acquire leadership skills, conduct community service and build unity among your chapter.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-akc-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>You must apply and qualify for membership.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-akc-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Apply with a major or minor in criminal justice or a related field.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-akc-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Requirements for eligibility on our website or QR code below.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-akc-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Meets one of the federal jobs qualifications for a GS-7 entry level pay.</span>
+          </li>
+        </ul>
+
+        <div class="mt-8 pt-6 border-t border-white/[0.08]">
+          <p class="text-[13px] font-medium text-akc-light/90 mb-3">Get connected! Join Alpha Phi Sigma, THE Criminal Justice Honor Society.</p>
+          <a href="https://alphaphisigma.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-akc-dark bg-akc-gold px-5 py-2.5 rounded-lg hover:bg-akc-gold-light transition-all duration-200">
+            Visit alphaphisigma.org
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
             </svg>
-          </div>
-          <h3 class="text-[15px] font-semibold text-akc-light">{item.title}</h3>
-          <p class="text-xs text-akc-light/50 leading-relaxed">{item.desc}</p>
+          </a>
         </div>
-      ))}
+      </div>
     </div>
   </div>
 </section>

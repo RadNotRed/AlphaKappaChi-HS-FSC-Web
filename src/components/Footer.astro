@@ -1,5 +1,7 @@
 ---
 import { siteConfig, navLinks, socialLinks } from '../data/siteConfig';
+import { Image } from 'astro:assets';
+import logoSmall from '../images/logosmall.png';
 ---
 
 <footer class="fade-in border-t border-white/[0.08] mt-14">
@@ -8,8 +10,9 @@ import { siteConfig, navLinks, socialLinks } from '../data/siteConfig';
       <!-- Brand -->
       <div class="sm:col-span-2 space-y-4">
         <div class="flex items-center gap-3">
-          <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-akc-navy to-akc-gold text-akc-dark font-bold text-xs">
-            {siteConfig.abbreviation}
+          <div class="relative flex h-10 items-center justify-center">
+            <div class="absolute inset-0 bg-white/20 rounded-full blur-md transform scale-125"></div>
+            <Image src={logoSmall} alt="Alpha Kappa Chi Logo" class="relative h-full w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
           </div>
           <div>
             <p class="text-sm font-semibold text-akc-light">{siteConfig.name}</p>
