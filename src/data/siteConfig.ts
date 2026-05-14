@@ -33,7 +33,7 @@ export const siteConfig = {
   donationLink: 'https://example.com/donate/akc-fsc',
 
   /** Year the society was founded */
-  foundedYear: 2024,
+  foundedYear: 2008,
 
   /** Copyright year shown in the footer */
   copyrightYear: 2025,
@@ -48,7 +48,7 @@ export const siteConfig = {
 export const heroStats = [
   { value: '3.25+', label: 'Min. GPA', highlight: true },
   { value: '4+',   label: 'Service Hours', highlight: false },
-  { value: '2024',  label: 'Founded',       highlight: false },
+  { value: '2008',  label: 'Founded',       highlight: false },
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
