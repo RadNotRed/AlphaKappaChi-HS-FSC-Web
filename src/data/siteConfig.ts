@@ -36,7 +36,10 @@ export const siteConfig = {
   foundedYear: 2008,
 
   /** Copyright year shown in the footer */
-  copyrightYear: 2025,
+  copyrightYear: 2026,
+
+  /** GitHub Repository URL */
+  githubRepo: 'https://github.com/RadNotRed/AlphaKappaChi-HS-FSC-Web',
 } as const;
 
 // ─────────────────────────────────────────────────────────────
