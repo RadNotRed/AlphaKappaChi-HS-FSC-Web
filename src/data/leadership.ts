@@ -25,7 +25,7 @@ export interface LeadershipMember {
 export const executiveBoard: LeadershipMember[] = [
   {
     name: 'Dr. Tino Posillico',
-    role: 'Faculty Director',
+    role: 'Faculty Advisor',
     bio: '',
   },
   {
