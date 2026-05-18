@@ -9,7 +9,9 @@ let lastUpdated = "";
 
 try {
   commitHash = execSync("git rev-parse --short HEAD").toString().trim();
-  const dateStr = execSync("git log -1 --format=%cd --date=iso").toString().trim();
+  const dateStr = execSync("git log -1 --format=%cd --date=iso")
+    .toString()
+    .trim();
 
   if (dateStr) {
     const date = new Date(dateStr);
@@ -41,7 +43,7 @@ try {
             </div>
             <Image
               src={logoSmall}
-              alt="Alpha Kappa Chi Logo"
+              alt="Kappa Chi Logo"
               class="relative h-full w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             />
           </div>
@@ -53,9 +55,9 @@ try {
           </div>
         </div>
         <p class="text-xs text-akc-light/40 max-w-sm leading-relaxed">
-          The Alpha Kappa Chi chapter of Alpha Phi Sigma — advancing justice
-          through scholarship, leadership, and service at {siteConfig.college} and
-          across {siteConfig.location}.
+          The Kappa Chi chapter of Alpha Phi Sigma — advancing justice through
+          scholarship, leadership, and service at {siteConfig.college} and across
+          {siteConfig.location}.
         </p>
         <div class="flex gap-2">
           {

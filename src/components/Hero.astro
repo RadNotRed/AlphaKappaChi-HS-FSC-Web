@@ -1,7 +1,7 @@
 ---
-import { siteConfig, heroStats } from '../data/siteConfig';
-import { Image } from 'astro:assets';
-import logoSmall from '../images/logosmall.png';
+import { siteConfig, heroStats } from "../data/siteConfig";
+import { Image } from "astro:assets";
+import logoSmall from "../images/logosmall.png";
 ---
 
 <section class="relative min-h-[80vh] flex items-center pt-8 pb-16">
@@ -9,19 +9,29 @@ import logoSmall from '../images/logosmall.png';
     <div class="grid items-center gap-10 lg:grid-cols-2">
       <!-- Text column -->
       <div class="space-y-6">
-        <div class="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.02] px-4 py-2 hero-animate hero-animate-delay-1 shadow-sm">
+        <div
+          class="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.02] px-4 py-2 hero-animate hero-animate-delay-1 shadow-sm"
+        >
           <div class="h-1.5 w-1.5 rounded-full bg-akc-gold animate-pulse"></div>
-          <span class="text-xs font-medium text-akc-light/80">{siteConfig.college} · {siteConfig.state}</span>
+          <span class="text-xs font-medium text-akc-light/80"
+            >{siteConfig.college} · {siteConfig.state}</span
+          >
         </div>
 
-        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[0.98] section-heading hero-animate hero-animate-delay-2">
-          Build a Bold Career in<br class="hidden sm:block" /> <span class="text-gradient">Justice Leadership</span>
+        <h1
+          class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[0.98] section-heading hero-animate hero-animate-delay-2"
+        >
+          Build a Bold Career in<br class="hidden sm:block" />
+          <span class="text-gradient">Justice Leadership</span>
         </h1>
 
-        <p class="text-base sm:text-lg section-copy max-w-xl leading-relaxed hero-animate hero-animate-delay-3">
-          The Alpha Kappa Chi chapter of Alpha Phi Sigma — the national criminal justice honor
-          society — unites Farmingdale State College's highest-achieving students dedicated to
-          academic excellence, leadership, service, and unity.
+        <p
+          class="text-base sm:text-lg section-copy max-w-xl leading-relaxed hero-animate hero-animate-delay-3"
+        >
+          The Kappa Chi chapter of Alpha Phi Sigma — the national criminal
+          justice honor society — unites Farmingdale State College's
+          highest-achieving students dedicated to academic excellence,
+          leadership, service, and unity.
         </p>
 
         <div class="flex flex-wrap gap-3 hero-animate hero-animate-delay-4">
@@ -30,8 +40,17 @@ import logoSmall from '../images/logosmall.png';
             class="group inline-flex items-center gap-2 rounded-lg bg-akc-gold px-6 py-3 text-sm font-semibold text-akc-dark hover:bg-akc-gold-light transition-all duration-200 shadow-md shadow-akc-gold/20"
           >
             Begin Your Journey
-            <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            <svg
+              class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </a>
           <a
@@ -43,55 +62,107 @@ import logoSmall from '../images/logosmall.png';
         </div>
 
         <!-- Stats -->
-        <div class="flex gap-8 pt-6 border-t border-white/[0.08] hero-animate hero-animate-delay-5">
-          {heroStats.map(stat => (
-            <div>
-              <p class={`text-2xl sm:text-3xl font-bold ${stat.highlight ? 'text-gradient' : 'text-akc-light'}`}>{stat.value}</p>
-              <p class="text-[11px] uppercase tracking-wider text-akc-light/60 mt-0.5">{stat.label}</p>
-            </div>
-          ))}
+        <div
+          class="flex gap-8 pt-6 border-t border-white/[0.08] hero-animate hero-animate-delay-5"
+        >
+          {
+            heroStats.map((stat) => (
+              <div>
+                <p
+                  class={`text-2xl sm:text-3xl font-bold ${stat.highlight ? "text-gradient" : "text-akc-light"}`}
+                >
+                  {stat.value}
+                </p>
+                <p class="text-[11px] uppercase tracking-wider text-akc-light/60 mt-0.5">
+                  {stat.label}
+                </p>
+              </div>
+            ))
+          }
         </div>
       </div>
 
       <!-- Hero card -->
       <div class="relative float hero-card-animate hidden lg:block">
-        <div class="absolute -inset-6 bg-akc-gold/20 rounded-3xl blur-2xl"></div>
-        <div class="relative rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-7 shadow-xl shadow-black/10">
+        <div class="absolute -inset-6 bg-akc-gold/20 rounded-3xl blur-2xl">
+        </div>
+        <div
+          class="relative rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-7 shadow-xl shadow-black/10"
+        >
           <!-- Badge -->
           <div class="flex justify-center mb-6">
             <div class="relative">
-              <div class="absolute inset-0 bg-white/20 rounded-full blur-2xl transform scale-110"></div>
-              <div class="relative flex flex-col items-center justify-center gap-3">
-                <Image src={logoSmall} alt="Alpha Kappa Chi Logo" class="h-28 w-auto max-w-full object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.6)]" />
-                <p class="text-[10px] uppercase tracking-widest text-akc-light/70 font-medium mt-1">Est. {siteConfig.foundedYear}</p>
+              <div
+                class="absolute inset-0 bg-white/20 rounded-full blur-2xl transform scale-110"
+              >
+              </div>
+              <div
+                class="relative flex flex-col items-center justify-center gap-3"
+              >
+                <Image
+                  src={logoSmall}
+                  alt="Kappa Chi Logo"
+                  class="h-28 w-auto max-w-full object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.6)]"
+                />
+                <p
+                  class="text-[10px] uppercase tracking-widest text-akc-light/70 font-medium mt-1"
+                >
+                  Est. {siteConfig.foundedYear}
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Mini feature cards -->
           <div class="space-y-3">
-            {[
-              { title: 'Academic Excellence', desc: 'Research circles, writing labs, and moot-court preparation with faculty mentors.', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' },
-              { title: 'Community Service', desc: 'Outreach programs and partnerships with local organizations across Long Island.', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
-              { title: 'Career Development', desc: 'Agency visits, resume workshops, and networking with justice professionals.', icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
-            ].map(item => (
-              <div class="rounded-xl border border-white/[0.08] bg-white/[0.02] p-4">
-                <div class="flex items-center gap-2.5 mb-1.5">
-                  <div class="w-7 h-7 rounded-md bg-akc-gold/10 flex items-center justify-center">
-                    <svg class="w-3.5 h-3.5 text-akc-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}></path>
-                    </svg>
+            {
+              [
+                {
+                  title: "Academic Excellence",
+                  desc: "Research circles, writing labs, and moot-court preparation with faculty mentors.",
+                  icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+                },
+                {
+                  title: "Community Service",
+                  desc: "Outreach programs and partnerships with local organizations across Long Island.",
+                  icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+                },
+                {
+                  title: "Career Development",
+                  desc: "Agency visits, resume workshops, and networking with justice professionals.",
+                  icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+                },
+              ].map((item) => (
+                <div class="rounded-xl border border-white/[0.08] bg-white/[0.02] p-4">
+                  <div class="flex items-center gap-2.5 mb-1.5">
+                    <div class="w-7 h-7 rounded-md bg-akc-gold/10 flex items-center justify-center">
+                      <svg
+                        class="w-3.5 h-3.5 text-akc-gold"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d={item.icon}
+                        />
+                      </svg>
+                    </div>
+                    <p class="text-sm font-semibold text-akc-light">
+                      {item.title}
+                    </p>
                   </div>
-                  <p class="text-sm font-semibold text-akc-light">{item.title}</p>
+                  <p class="text-xs text-akc-light/70 leading-relaxed pl-[38px]">
+                    {item.desc}
+                  </p>
                 </div>
-                <p class="text-xs text-akc-light/70 leading-relaxed pl-[38px]">{item.desc}</p>
-              </div>
-            ))}
+              ))
+            }
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
